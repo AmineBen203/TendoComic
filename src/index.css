@@ -6,10 +6,14 @@
 body {
   background-color: #000;
   color: #fff;
+  cursor: url('https://cdn.custom-cursor.com/128/assets/arrows/32/Cursoji_-_Alien_Cursor.png'), auto;
 }
 
-body {
-  cursor: url('/assets/icon/ufo-cursor.png'), auto;
+button,
+a,
+[class*="cursor-pointer"] {
+  cursor: url('https://cdn.custom-cursor.com/128/assets/pointers/32/Cursoji_-_Alien_Cursor.png'), pointer;
 }
+
 
 
