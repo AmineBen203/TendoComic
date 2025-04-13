@@ -7,6 +7,7 @@ import About from './About';
 import Header from './Header';
 import './index.css';
 import ProductPage from './ProductPage';
+import Footer from './Footer';
 import PayPalButton from './PayPalButton';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
