@@ -1,5 +1,3 @@
-![TendoComic Cover](./public/assets/comic/COVER.png)
-
 <div align="center">
   <img src="./public/assets/comic/COVER.png" alt="TendoComic Cover" style="width:100%; max-width:500px; border-radius:8px;"/>
   <h1 style="margin-top: 1rem;">🛸 TendoComic</h1>
