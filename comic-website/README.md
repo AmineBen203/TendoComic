@@ -1,43 +1,12 @@
-# Comic Website
+# React + Vite
 
-This project is a comic website that allows users to view and interact with various comics. It features a clean and user-friendly interface, making it easy to navigate through different comic pages.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Features
+Currently, two official plugins are available:
 
-- **Home Page**: A landing page that introduces the website.
-- **Comics Page**: A page that displays a list of available comics.
-- **About Page**: Information about the website and its purpose.
-- **Contact Page**: A contact form for users to reach out.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Technologies Used
+## Expanding the ESLint configuration
 
-- React for building user interfaces
-- CSS for styling
-- JavaScript for functionality
-
-## Getting Started
-
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   ```
-2. Navigate to the project directory:
-   ```
-   cd comic-website
-   ```
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm start
-   ```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you'd like to add.
-
-## License
-
-This project is licensed under the MIT License.
+If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
