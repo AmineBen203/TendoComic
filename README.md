@@ -21,7 +21,7 @@ The website includes:
 
 ## 🚀 Live Demo
 
-🌐 [Visit TendoComic Live](https://your-deployment-url.com)
+🌐 [Visit TendoComic Live](https://tendocomic.me)
 
 ---
 
