@@ -10,7 +10,7 @@ export default function Header() {
     <header className="bg-black text-white p-4 flex justify-between items-center border-b border-gray-700">
       <h1 className="text-xl font-bold tracking-widest flex items-center">
         {/* 👇 Clickable logo triggers audio */}
-        <a href="/" onClick={playAudio} className="flex items-center">
+        <a onClick={playAudio} className="flex items-center">
           <img src="/assets/icon/icon.png" alt="Site Logo" className="h-24 w-24 mr-2" />
           <span className="text-3xl">TendoComic</span>
         </a>
