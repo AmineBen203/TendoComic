@@ -15,6 +15,13 @@
     <link rel="stylesheet" crossorigin href="/assets/index-C2U0gq38.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+      <script>
+        if (sessionStorage.redirect) {
+          const path = sessionStorage.redirect;
+          sessionStorage.removeItem("redirect");
+          window.history.replaceState(null, "", path);
+        }
+      </script>
   </body>
 </html>
