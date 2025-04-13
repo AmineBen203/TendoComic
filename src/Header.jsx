@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   const playAudio = () => {
-    const audio = new Audio('/sounds/ufo.mp3'); // must exist in "public/sounds/"
+    const audio = new Audio('/sounds/allo.m4a'); // must exist in "public/sounds/"
     audio.play();
   };
 
