@@ -28,7 +28,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="text-xs text-gray-500">
-          &copy; {new Date().getFullYear()} Josh – The Unknown Call. All rights reserved.
+          &copy; {new Date().getFullYear()} TendoComic. All rights reserved.
         </p>
       </footer>
     );
