@@ -9,7 +9,7 @@ export default function Home() {
       </h1>
 
       <div className="latest-comic mb-16">
-        <Link to="/comic">
+        <Link to="/Comic">
           <img src="/assets/comic/COVER.png" alt="Cover" className="mx-auto w-72 mb-6" />
         </Link>
         
