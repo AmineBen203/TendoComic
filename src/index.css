@@ -7,3 +7,9 @@ body {
   background-color: #000;
   color: #fff;
 }
+
+body {
+  cursor: url('/assets/icon/ufo-cursor.png'), auto;
+}
+
+
