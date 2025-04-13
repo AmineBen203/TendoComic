@@ -9,6 +9,7 @@ import './index.css';
 import ProductPage from './ProductPage';
 import Footer from './Footer';
 import PayPalButton from './PayPalButton';
+import Broadcast from './Broadcast';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/broadcast" element={<Broadcast />} />
         </Routes>
         <Footer />
       </div>

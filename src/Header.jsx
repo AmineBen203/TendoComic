@@ -21,6 +21,8 @@ export default function Header() {
         <Link to="/comic">Comic</Link>
         <Link to="/shop">Shop</Link>
         <Link to="/about">About</Link>
+        <Link to="/broadcast">Broadcast</Link>
+        {/* Add more links as needed */}
       </nav>
     </header>
   );
