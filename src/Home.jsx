@@ -9,9 +9,10 @@ export default function Home() {
       </h1>
 
       <div className="latest-comic mb-16">
-        <a href="/comic">
+        <Link to="/comic">
           <img src="/assets/comic/COVER.png" alt="Cover" className="mx-auto w-72 mb-6" />
-        </a>
+        </Link>
+        
           <h2 className="text-3xl mt-6 font-bold">The only man who answered the call...</h2>
           <p className="mt-2 text-gray-400 max-w-xl mx-auto">
             Discover Josh's journey with aliens in a black & white sci-fi webcomic.
