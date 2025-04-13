@@ -3,18 +3,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icon-B82D9isC.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Josh - The Unknown Call</title>
+    <title>Tendo Comic</title>
     <script
       src="https://www.paypal.com/sdk/js?client-id=BAALYCM-Xy88e1VZf4ImESawuxvaZDuUKuymyMMESjjcy-exu0Cm1XNADME0y5W3AHfU4R2VkHRKm7qTXU&components=hosted-buttons&disable-funding=venmo&currency=USD" 
       crossorigin="anonymous" 
       async>
-    </script>
-    <script type="module" crossorigin src="/TendoComic/assets/index-CizA1KF-.js"></script>
-    <link rel="stylesheet" crossorigin href="/TendoComic/assets/index-C2U0gq38.css">
+    </script>
+    <script type="module" crossorigin src="/assets/index-DFmndFby.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C2U0gq38.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
+      <script>
+        if (sessionStorage.redirect) {
+          const path = sessionStorage.redirect;
+          sessionStorage.removeItem("redirect");
+          window.history.replaceState(null, "", path);
+        }
+      </script>
   </body>
 </html>
