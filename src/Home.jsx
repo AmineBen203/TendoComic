@@ -1,5 +1,7 @@
 import PayPalButton from "./PayPalButton";
 import { Link } from "react-router-dom";
+import Comic from "./Comic";
+import Broadcast from "./Broadcast";
 
 export default function Home() {
   return (
@@ -10,7 +12,7 @@ export default function Home() {
         </h1>
   
         <div className="latest-comic mb-16">
-          <Link to="/comic">
+          <Link to="./Comic">
             <img src="/assets/comic/COVER.png" alt="Cover" className="mx-auto w-72 mb-6" />
           </Link>
           
@@ -31,6 +33,13 @@ export default function Home() {
             View Product
           </Link>
         </div>
+
+        <div className="bg-white text-black p-6 rounded max-w-md mx-auto mb-10">
+          <Link to="./Broadcast">
+            <h2 className="text-xl font-bold">🛸 Click here for a surprise</h2>
+          </Link>
+          /</div>
+          <PayPalButton />
       </div>
     </div>
   );
