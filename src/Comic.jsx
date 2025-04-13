@@ -8,7 +8,7 @@ export default function Comic() {
           key={i}
           src={`/assets/comic/${i}.png`}
           alt={`Panel ${i}`}
-           className="w-full max-w-screen-sm h-auto"
+           "w-full h-auto max-h-[90vh] object-contain"
         />
       ))}
     </div>
