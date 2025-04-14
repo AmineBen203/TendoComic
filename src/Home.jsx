@@ -1,7 +1,5 @@
 import PayPalButton from "./PayPalButton";
 import { Link } from "react-router-dom";
-import Comic from "./Comic";
-import Broadcast from "./Broadcast";
 
 export default function Home() {
   return (
