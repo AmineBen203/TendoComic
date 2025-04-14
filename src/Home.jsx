@@ -34,12 +34,11 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="bg-white text-black p-6 rounded max-w-md mx-auto mb-10">
+        <div className="">
           <Link to="./Broadcast">
             <h2 className="text-xl font-bold">🛸 Click here for a surprise</h2>
           </Link>
-          /</div>
-          <PayPalButton />
+        </div>
       </div>
     </div>
   );
