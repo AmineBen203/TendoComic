@@ -1,5 +1,4 @@
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Comic from './Comic';
 import Shop from './Shop';
@@ -13,20 +12,18 @@ import Broadcast from './Broadcast';
 
 function App() {
   return (
-    <Router>
-      <div className="bg-black text-white min-h-screen font-mono cursor-ufocursor bg-stars">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/comic" element={<Comic />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/broadcast" element={<Broadcast />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <div className="bg-black text-white min-h-screen font-mono cursor-ufocursor bg-stars">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/comic" element={<Comic />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/broadcast" element={<Broadcast />} />
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 

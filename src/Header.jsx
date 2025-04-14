@@ -5,7 +5,7 @@ import icon from './assets/icon/icon.png';
 
 export default function Header() {
   const playAudio = () => {
-    const audio = new Audio('/sounds/allo.m4a');
+    const audio = new Audio('./assets/sounds/allo.mp3');
     audio.play();
   };
 
@@ -13,7 +13,7 @@ export default function Header() {
     <header className="bg-black text-white p-4 flex justify-between items-center border-b border-gray-700">
       <h1 className="text-xl font-bold tracking-widest flex items-center">
         {/* 👇 Clickable logo triggers audio */}
-        <a onClick={playAudio} className="flex items-center">
+        <a href="./" onClick={playAudio} className="flex items-center">
           <img src={icon} alt="Site Logo" className="h-24 w-24 mr-2" />
           <span className="text-3xl">TendoComic</span>
         </a>
