@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import icon from './assets/icon/icon.png';  
+import sound from './assets/sounds/allo.mp3';
 
 
 export default function Header() {
   const playAudio = () => {
-    const audio = new Audio('./assets/sounds/allo.mp3');
+    const audio = new Audio({sound});
     audio.play();
   };
 
