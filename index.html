@@ -1,19 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icon-B82D9isC.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tendo Comic</title>
     <script
-      src="https://www.paypal.com/sdk/js?client-id=YOUR_ID&components=hosted-buttons&disable-funding=venmo&currency=USD"
-      crossorigin="anonymous"
-      async
-    ></script>
-    <script type="module" crossorigin src="/assets/index-Ffpjszwc.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CzOhVXOe.css">
+      src="https://www.paypal.com/sdk/js?client-id=BAALYCM-Xy88e1VZf4ImESawuxvaZDuUKuymyMMESjjcy-exu0Cm1XNADME0y5W3AHfU4R2VkHRKm7qTXU&components=hosted-buttons&disable-funding=venmo&currency=USD" 
+      crossorigin="anonymous" 
+      async>
+    </script>
+    <script type="module" crossorigin src="/assets/index-ZxKAuhyY.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Ad78sajX.css">
   </head>
   <body>
     <div id="root"></div>
+      <script>
+        if (sessionStorage.redirect) {
+          const path = sessionStorage.redirect;
+          sessionStorage.removeItem("redirect");
+          window.history.replaceState(null, "", path);
+        }
+      </script>
   </body>
 </html>
