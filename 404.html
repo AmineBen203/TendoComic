@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found</title>
     <script>
-      sessionStorage.redirect = location.pathname;
-      
+      // Handle single-page app routing fallback
+      window.location.replace(window.location.pathname.replace(/\/$/, '') + '/');
     </script>
   </head>
-  <body></body>
+  <body>
+    <h1>404 - Page Not Found</h1>
+    <p>The page you are looking for was taken by UFO.</p>
+  </body>
 </html>
