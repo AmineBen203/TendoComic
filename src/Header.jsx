@@ -11,7 +11,7 @@ export default function Header() {
       <h1 className="text-xl font-bold tracking-widest flex items-center">
         {/* 👇 Clickable logo triggers audio */}
         <a onClick={playAudio} className="flex items-center">
-          <img src="//assets/icon/icon.png" alt="Site Logo" className="h-24 w-24 mr-2" />
+          <img src="/assets/icon/icon.png" alt="Site Logo" className="h-24 w-24 mr-2" />
           <span className="text-3xl">TendoComic</span>
         </a>
       </h1>
