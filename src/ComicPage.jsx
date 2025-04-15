@@ -7,6 +7,7 @@ function ComicPage() {
   const { id } = useParams()
   const [comic, setComic] = useState(null)
   const [pdfUrl, setPdfUrl] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchComicAndPDF = async () => {
@@ -18,6 +19,7 @@ function ComicPage() {
 
       if (comicError) {
         console.error('Error loading comic:', comicError)
+        setLoading(false)
         return
       }
 
@@ -31,18 +33,32 @@ function ComicPage() {
 
       if (pagesError) {
         console.error('Error loading PDF:', pagesError)
+        setLoading(false)
         return
       }
 
       if (pagesData && pagesData.length > 0) {
         setPdfUrl(pagesData[0].comic_pdf)
       }
+
+      setLoading(false)
     }
 
     fetchComicAndPDF()
   }, [id])
 
-  if (!comic) return <div className="text-center mt-6">Loading comic...</div>
+  if (loading) {
+    return (
+      <div className="text-center mt-10">
+        <div className="w-1/2 mx-auto bg-gray-200 rounded-full h-4 dark:bg-gray-700">
+          <div className="bg-blue-600 h-4 rounded-full animate-pulse w-3/4"></div>
+        </div>
+        <p className="mt-4 text-gray-500">Loading comic...</p>
+      </div>
+    )
+  }
+
+  if (!comic) return <div className="text-center mt-6">Comic not found.</div>
 
   return (
     <div className="max-w-screen-md mx-auto px-4 pb-10">
@@ -54,7 +70,6 @@ function ComicPage() {
       ) : (
         <p className="text-sm text-gray-400">No PDF found for this comic.</p>
       )}
-
     </div>
   )
 }
