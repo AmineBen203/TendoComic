@@ -3,7 +3,7 @@ export default function Footer() {
       <footer className="bg-black text-gray-400 py-8 border-t border-gray-700 text-center text-sm">
         <div className="mb-3">
           <a
-            href="hhttps://discord.gg/t5CpXaK7QY"
+            href="https://discord.gg/t5CpXaK7QY"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2 hover:text-white transition"
