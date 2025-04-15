@@ -14,7 +14,7 @@ export default function Home() {
             <img src="/assets/comic/COVER.png" alt="Cover" className="mx-auto w-72 mb-6" />
           </Link>
           
-            <h2 className="text-3xl mt-6 font-bold">The only man who Y the call...</h2>
+            <h2 className="text-3xl mt-6 font-bold">The only man who answered the call...</h2>
             <p className="mt-2 text-gray-400 max-w-xl mx-auto">
               Discover Josh's journey with aliens in a black & white sci-fi webcomic.
             </p>
