@@ -34,7 +34,7 @@ function Comics() {
               alt={comic.title}
               className="w-full h-auto max-h-[600px] object-contain rounded-md"
             />
-            <h2 className="text-lg font-bold mt-3 text-white text-center">Title{comic.title}</h2>
+            <h2 className="text-lg font-bold mt-3 text-white text-center">Title: {comic.title}</h2>
             <p className="text-gray-400 text-sm text-center">Author: {comic.author}</p>
             <p className="text-gray-400 text-sm text-center">Date: {comic.date}</p>
             <p className="text-gray-400 text-sm text-center">Genre: {comic.category}</p>
