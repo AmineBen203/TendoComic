@@ -27,21 +27,20 @@ function Comics() {
           <Link
             key={comic.id}
             to={`/comic/${comic.id}`}
-            className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow"
+            className="bg-zinc-900 border border-zinc-700 p-4 rounded-xl shadow-md hover:shadow-xl hover:border-white transition-all duration-300 transform hover:scale-105"
           >
             <img
               src={comic.cover}
               alt={comic.title}
-              className="w-full h-72 object-cover rounded-t-xl"
+              className="w-full h-auto max-h-[600px] object-contain rounded-md"
             />
-            <div className="p-4">
-              <h2 className="text-lg font-bold">{comic.title}</h2>
-              <p className="text-sm text-gray-500">{comic.category} • {comic.author}</p>
-              {comic.description && (
-                <p className="text-sm text-gray-600 mt-2 line-clamp-2">{comic.description}</p>
-              )}
-            </div>
+            <h2 className="text-lg font-bold mt-3 text-white text-center">Title{comic.title}</h2>
+            <p className="text-gray-400 text-sm text-center">Author: {comic.author}</p>
+            <p className="text-gray-400 text-sm text-center">Date: {comic.date}</p>
+            <p className="text-gray-400 text-sm text-center">Genre: {comic.category}</p>
           </Link>
+        
+        
         ))}
       </div>
     </div>

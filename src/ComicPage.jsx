@@ -1,48 +1,60 @@
-// src/pages/ComicPage.jsx
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { supabase } from './utils/supabase'
+import PdfViewer from './components/PdfViewer'
 
 function ComicPage() {
   const { id } = useParams()
-  const [pages, setPages] = useState([])
   const [comic, setComic] = useState(null)
+  const [pdfUrl, setPdfUrl] = useState(null)
 
   useEffect(() => {
-    const fetchComic = async () => {
-      const { data: comicData } = await supabase
+    const fetchComicAndPDF = async () => {
+      const { data: comicData, error: comicError } = await supabase
         .from('comics')
         .select('*')
         .eq('id', id)
         .single()
+
+      if (comicError) {
+        console.error('Error loading comic:', comicError)
+        return
+      }
+
       setComic(comicData)
-    }
 
-    const fetchPages = async () => {
-      const { data: pagesData } = await supabase
+      const { data: pagesData, error: pagesError } = await supabase
         .from('comic_pages')
-        .select('*')
+        .select('comic_pdf')
         .eq('comic_id', id)
-        .order('page_number', { ascending: true })
+        .limit(1)
 
-      setPages(pagesData)
+      if (pagesError) {
+        console.error('Error loading PDF:', pagesError)
+        return
+      }
+
+      if (pagesData && pagesData.length > 0) {
+        setPdfUrl(pagesData[0].comic_pdf)
+      }
     }
 
-    fetchComic()
-    fetchPages()
+    fetchComicAndPDF()
   }, [id])
 
-  if (!comic) return <div>Loading...</div>
+  if (!comic) return <div className="text-center mt-6">Loading comic...</div>
 
   return (
-    <div className="max-w-screen-md mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-4">{comic.title}</h1>
-      <p className="mb-2 text-gray-600">By {comic.author}</p>
-      <div className="space-y-4">
-        {pages.map((page) => (
-          <img key={page.id} src={page.image_url} alt={`Page ${page.page_number}`} className="w-full rounded-lg" />
-        ))}
-      </div>
+    <div className="max-w-screen-md mx-auto px-4 pb-10">
+      <h1 className="text-3xl font-bold mb-2">{comic.title}</h1>
+      <p className="mb-4 text-gray-500">By {comic.author}</p>
+
+      {pdfUrl ? (
+        <PdfViewer key={pdfUrl} pdfUrl={pdfUrl} />
+      ) : (
+        <p className="text-sm text-gray-400">No PDF found for this comic.</p>
+      )}
+
     </div>
   )
 }

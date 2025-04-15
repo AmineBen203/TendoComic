@@ -12,6 +12,7 @@
     "@supabase/supabase-js": "^2.49.4",
     "@tailwindcss/typography": "^0.5.10",
     "@vitejs/plugin-react": "^4.1.1",
+    "pdfjs-dist": "^5.1.91",
     "postgres": "^3.4.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
