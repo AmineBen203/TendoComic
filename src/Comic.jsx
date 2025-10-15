@@ -3,6 +3,14 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { supabase } from './utils/supabase'
 
+// choose one of these lines:
+export const revalidate = 0;
+// or:
+export const dynamic = 'force-dynamic';
+// optional (Next 14+):
+export const fetchCache = 'force-no-store';
+
+
 function Comics() {
   const [comics, setComics] = useState([])
 
